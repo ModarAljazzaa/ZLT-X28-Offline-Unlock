@@ -19,3 +19,6 @@ Desktop.ini
 .env
 credentials.txt
 session.txt
+
+# Local Java build workspace (the finished JAR in dist/ is published)
+build-java/

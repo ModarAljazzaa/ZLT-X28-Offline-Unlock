@@ -27,6 +27,16 @@ Read this before running or redistributing the package.
   long-lived TR-069 connections are disabled.
 - TR-069 ACS/CPE credentials and remote endpoints are cleared.
 - Storage is synchronized before reboot.
+- The GUI validates the embedded archive before starting and does not display
+  entered passwords in its terminal.
+
+## GUI networking
+
+The GUI accepts the modem's self-signed HTTPS certificate only for its direct
+API connection to the configured modem address, matching the documented
+`curl -k` behavior. Its temporary HTTP server binds locally so the modem can
+download the embedded files; an operating-system firewall may request private
+network access. The server is stopped when the operation ends or the GUI closes.
 
 ## Recommended precautions
 

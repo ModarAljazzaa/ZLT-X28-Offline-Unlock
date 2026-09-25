@@ -1,4 +1,4 @@
-# ZLT X28 1.5.13 — Manual Offline Unlock
+# ZLT X28 1.5.13 — Offline Unlock
 
 > [!CAUTION]
 > Use this procedure only on a **ZLT X28 running software version 1.5.13**.
@@ -11,12 +11,66 @@ This method is completely local:
 - No WAN connection, second modem, or external internet is required.
 - The laptop serves `x28.sh` and `x28.tgz` directly to the modem.
 
+## Java GUI (recommended)
+
+The cross-platform GUI automates the manual procedure and displays the modem's
+real Telnet output in its built-in live terminal.
+
+Requirements:
+
+- Java 8 or newer.
+- A LAN connection to the X28.
+- A current `sessionId` copied from the modem web panel.
+
+Run on Windows:
+
+```powershell
+java -jar .\dist\ZLT-X28-Unlock.jar
+```
+
+Run on macOS or Linux:
+
+```sh
+java -jar ./dist/ZLT-X28-Unlock.jar
+```
+
+The GUI:
+
+1. Validates the embedded `x28.tgz` checksum.
+2. Enables Telnet directly with `cmd:172`; it does not enable WAN.
+3. Waits until modem port 23 is actually open.
+4. Starts a temporary local server for the embedded archive and generated
+   installer.
+5. Connects to the modem through Telnet and streams its raw output live.
+6. Creates backups, installs the files, writes the selected normal/senior/super
+   credentials, disables TR-069, synchronizes storage, and reboots.
+
+The normal username defaults to `user`. The super starter values are
+`superadmin/strong_password`; change them in the GUI before unlocking because
+they are public. Passwords are never printed in the terminal.
+
+To rebuild the JAR with JDK 9 or newer:
+
+```powershell
+.\build_jar.ps1
+```
+
+or:
+
+```sh
+sh ./build_jar.sh
+```
+
+The remaining sections document the equivalent manual procedure.
+
 ## Files used
 
 | Item | Purpose |
 |------|---------|
 | `x28.sh` | Shell installer executed inside the modem through Telnet |
 | `x28.tgz` | Replacement configuration and ARM64 modem binaries |
+| `dist/ZLT-X28-Unlock.jar` | Cross-platform GUI with embedded archive |
+| `src/ZltX28Unlock.java` | GUI source code |
 | `reference/x28/` | Extracted reference copy of the archive; it is not executed |
 
 See [SECURITY.md](SECURITY.md) before using or redistributing the package, and

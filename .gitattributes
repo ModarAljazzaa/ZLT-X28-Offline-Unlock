@@ -4,4 +4,7 @@
 *.md text eol=lf
 *.txt text eol=lf
 *.sh text eol=lf
+*.java text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
 reference/x28/mnt/data/etc/tzcfg/main_config -text whitespace=-blank-at-eof
