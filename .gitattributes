@@ -1,0 +1,7 @@
+* -text
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.sh text eol=lf
+reference/x28/mnt/data/etc/tzcfg/main_config -text whitespace=-blank-at-eof

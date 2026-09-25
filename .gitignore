@@ -1,0 +1,21 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.tmp
+*~
+
+# IDE metadata
+.idea/
+.vscode/
+
+# Local logs and captures
+*.log
+*.pcap
+*.pcapng
+
+# Never commit local credentials or session data
+.env
+credentials.txt
+session.txt
