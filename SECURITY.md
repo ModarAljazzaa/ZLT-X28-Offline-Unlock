@@ -45,9 +45,11 @@ network access. The server is stopped when the operation ends or the GUI closes.
 3. Verify `CHECKSUMS.txt` before use.
 4. Choose unique senior and super credentials and store them safely.
 5. Never commit a live `sessionId` or real credentials to GitHub.
-6. After reboot, verify that Telnet port 23 is closed when it is no longer
+6. Treat a factory reset as an optional destructive persistence test: it erases
+   modem settings, and its exact credential behavior can vary by firmware.
+7. After reboot, verify that Telnet port 23 is closed when it is no longer
    required.
-7. Confirm that you have the legal right to redistribute the included vendor
+8. Confirm that you have the legal right to redistribute the included vendor
    binaries. No new license for those binaries is asserted by this repository.
 
 ## Static inspection summary

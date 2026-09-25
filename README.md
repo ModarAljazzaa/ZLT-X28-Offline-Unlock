@@ -71,7 +71,6 @@ The remaining sections document the equivalent manual procedure.
 | `x28.tgz` | Replacement configuration and ARM64 modem binaries |
 | `dist/ZLT-X28-Unlock.jar` | Cross-platform GUI with embedded archive |
 | `src/ZltX28Unlock.java` | GUI source code |
-| `reference/x28/` | Extracted reference copy of the archive; it is not executed |
 
 See [SECURITY.md](SECURITY.md) before using or redistributing the package, and
 use [CHECKSUMS.txt](CHECKSUMS.txt) to verify that the files have not changed.
@@ -274,6 +273,22 @@ The original files are retained on the modem as:
 /tzwww/cgi-bin/http.cgi.bk
 /usr/bin/mtk_netagent.bk
 ```
+
+## 8. Verify the unlock after reboot
+
+1. Wait several minutes for the modem to finish rebooting.
+2. Open <https://192.168.70.1> and sign in with the normal credentials you
+   selected. Confirm that the web panel and expected unlocked features work.
+3. Sign out, then verify the private super account you selected also works.
+4. Confirm TR-069 remains disabled and record all credentials somewhere safe.
+
+A factory reset is an optional final persistence test, not a required part of
+the unlock. It erases the modem's current settings, Wi-Fi configuration, and
+other user data. Perform it only after the first login checks succeed and only
+if you are prepared to configure the modem again. Keep power connected while it
+resets. When it finishes, try the credentials printed on the router label if
+the selected normal login no longer works, then verify the private super login
+and unlocked features again. Reset behavior can vary by firmware.
 
 ## Troubleshooting
 

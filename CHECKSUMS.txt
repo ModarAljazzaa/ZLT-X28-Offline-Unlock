@@ -2,9 +2,6 @@
 eea5e8c880f600b058482e7d93e46ee546d8bcd1a14ff7c49c24a3fd7f93c7b9  x28.sh
 81b75ba07771c0e1f32d0c0f7e17b953b2bf010462fdce166d1f58abe5469961  x28.tgz
 968f78176932f62b9ec4c1592f65ec6f2b0380cf4b0e52609762c0b21c5c244e  dist/ZLT-X28-Unlock.jar
-28d741e94e19226bf0816662655aa7f828bcab65524f060e37dd4aecad08a085  reference/x28/mnt/data/etc/tzcfg/main_config
-1019eb7617b8cf2e534dcea7711a9532ede87c12b7022c053fcf5cad4871fe02  reference/x28/tzwww/cgi-bin/http.cgi
-5347850d8a4cab0988399c4a8090a0ca83a31978dcecfaf9b258ddc9ded03822  reference/x28/usr/bin/mtk_netagent
 
 # MD5 used by x28.sh for the modem-side archive transfer check
 1468b8686d86b34337c1ee0086a42a76  x28.tgz
