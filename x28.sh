@@ -4,7 +4,7 @@ set -e
 # Edit these values before serving this script to the modem.
 # Use the normal credentials printed on the router label so they are memorable
 # after a reset. Give the senior and super accounts different private values.
-NORMAL_LOGIN_NAME='admin'
+NORMAL_LOGIN_NAME='user'
 NORMAL_LOGIN_PWD='CHANGE_ME_TO_ROUTER_PASSWORD'
 SENIOR_LOGIN_NAME='root'
 SENIOR_LOGIN_PWD='CHANGE_ME_TO_PRIVATE_PASSWORD'
