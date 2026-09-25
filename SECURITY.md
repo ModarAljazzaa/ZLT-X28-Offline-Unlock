@@ -20,7 +20,8 @@ Read this before running or redistributing the package.
 
 - The archive MD5 is checked before extraction.
 - Existing backups are not overwritten.
-- Public example credentials are replaced with user-selected values.
+- The public `superadmin/strong_password` starter values must be replaced with
+  private values in `x28.sh` before installation.
 - Installation stops while a `CHANGE_ME` credential placeholder remains.
 - TR-069/CWMP, periodic reporting, automatic upgrades, upgrade prompts, and
   long-lived TR-069 connections are disabled.

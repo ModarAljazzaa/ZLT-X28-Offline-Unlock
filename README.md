@@ -93,20 +93,33 @@ NORMAL_LOGIN_NAME='user'
 NORMAL_LOGIN_PWD='PASSWORD_PRINTED_ON_ROUTER_LABEL'
 SENIOR_LOGIN_NAME='YOUR_PRIVATE_SENIOR_NAME'
 SENIOR_LOGIN_PWD='YOUR_PRIVATE_SENIOR_PASSWORD'
-SUPER_LOGIN_NAME='YOUR_PRIVATE_SUPER_NAME'
-SUPER_LOGIN_PWD='YOUR_PRIVATE_SUPER_PASSWORD'
+SUPER_LOGIN_NAME='superadmin'
+SUPER_LOGIN_PWD='strong_password'
 ```
 
 - For the normal account, use the credentials printed on the router label or
   another value you will remember and record. This makes recovery after a
   factory reset easier, although exact reset behavior can vary by firmware.
 - Give the senior and super accounts different private credentials.
-- Do not keep public example credentials such as `root/admin` or
-  `modar/modar`.
+- `superadmin/strong_password` is only a public starter example. Change both
+  values to private credentials before installation.
 - Do not reuse the normal-user password for the privileged accounts.
 - Do not put a single quote or line break inside a value.
 
 The installer refuses to continue if a `CHANGE_ME` placeholder remains.
+
+The archive's extracted reference still contains its original super-account
+values. After extracting the archive, `x28.sh` rewrites the live modem settings
+to:
+
+```sh
+export SYS_SUPER_LOGIN_NAME="superadmin"
+export SYS_SUPER_LOGIN_PWD="strong_password"
+```
+
+If you edit `SUPER_LOGIN_NAME` and `SUPER_LOGIN_PWD` at the top of `x28.sh`,
+your private replacements are written instead. This happens before
+`mtk_netagent` restarts, and `x28.tgz` remains unchanged.
 
 ### TR-069 protection
 
