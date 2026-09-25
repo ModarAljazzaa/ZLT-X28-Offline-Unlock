@@ -20,9 +20,7 @@ Read this before running or redistributing the package.
 
 - The archive MD5 is checked before extraction.
 - Existing backups are not overwritten.
-- The normal and senior credentials are replaced with user-selected values.
-- The requested super-account default is `modar/modar`; change it before use on
-  any network where untrusted users could reach the modem panel.
+- Public example credentials are replaced with user-selected values.
 - Installation stops while a `CHANGE_ME` credential placeholder remains.
 - TR-069/CWMP, periodic reporting, automatic upgrades, upgrade prompts, and
   long-lived TR-069 connections are disabled.

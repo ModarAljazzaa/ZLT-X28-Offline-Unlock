@@ -93,26 +93,20 @@ NORMAL_LOGIN_NAME='user'
 NORMAL_LOGIN_PWD='PASSWORD_PRINTED_ON_ROUTER_LABEL'
 SENIOR_LOGIN_NAME='YOUR_PRIVATE_SENIOR_NAME'
 SENIOR_LOGIN_PWD='YOUR_PRIVATE_SENIOR_PASSWORD'
-SUPER_LOGIN_NAME='modar'
-SUPER_LOGIN_PWD='modar'
+SUPER_LOGIN_NAME='YOUR_PRIVATE_SUPER_NAME'
+SUPER_LOGIN_PWD='YOUR_PRIVATE_SUPER_PASSWORD'
 ```
 
 - For the normal account, use the credentials printed on the router label or
   another value you will remember and record. This makes recovery after a
   factory reset easier, although exact reset behavior can vary by firmware.
 - Give the senior and super accounts different private credentials.
-- The requested super-account default is `modar/modar`. Because this value is
-  public in the repository, change it before installation if the modem will be
-  used on a network with other users.
+- Do not keep public example credentials such as `root/admin` or
+  `modar/modar`.
 - Do not reuse the normal-user password for the privileged accounts.
 - Do not put a single quote or line break inside a value.
 
 The installer refuses to continue if a `CHANGE_ME` placeholder remains.
-
-The extracted reference file still shows the archive's original
-`mahdi/mahdi` value. The installer changes the live modem configuration to
-`modar/modar` after extraction and before restarting `mtk_netagent`; the
-archive is intentionally left unchanged so its verified MD5 remains valid.
 
 ### TR-069 protection
 
